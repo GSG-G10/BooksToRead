@@ -29,7 +29,7 @@ header ul li {
 }
 
 header ul li:hover{
-    border-bottom: 2px solid rgb(138, 138, 138);
+    border-bottom: 4px solid rgb(255, 0, 0);
 }
 
 header ul li a {

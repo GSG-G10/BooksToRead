@@ -1,6 +1,6 @@
 import React from "react";
 import "./componentCss/Header.css";
-
+import Welcome from "./Welcome";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Header = () => {
@@ -12,6 +12,9 @@ const Header = () => {
             <Link to="/">HOME</Link>
           </li>
           <li>
+            <Link to="/search">Search</Link>
+          </li>
+          <li>
             <Link to="/new">Newest</Link>
           </li>
           <li>
@@ -21,9 +24,12 @@ const Header = () => {
       </header>
 
       <Switch>
-        <Route exact path="/"></Route>
+        <Route exact path="/">
+          <Welcome />
+        </Route>
         <Route exact path="/new"></Route>
         <Route exact path="/read"></Route>
+        <Route exact path="/search"></Route>
       </Switch>
     </Router>
   );

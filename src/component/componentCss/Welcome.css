@@ -1,0 +1,38 @@
+.welcome {
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(128, 50, 50, 0.8)), url(../../img/iStock-587536358.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title,
+.desc {
+    color: rgb(255, 250, 250);
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(255, 214, 214);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    border-bottom: 4px solid rgb(255, 0, 0);
+}
+
+.link:hover {
+    border-bottom: 4px solid rgb(255, 255, 255);
+    color: rgb(255, 38, 0);
+}
