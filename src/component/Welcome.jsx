@@ -3,7 +3,7 @@ import "./componentCss/Welcome.css";
 const Welcome = () => {
   return (
 
-      <div className="welcome">
+      <div className="basic">
         <div className="text-box">
           <h1 className="title">To-Do list ...What about To-Read list?</h1>
           <h3 className="desc">
