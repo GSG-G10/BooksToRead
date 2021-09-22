@@ -1,28 +1,26 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import "./componentCss/Header.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import Welcome from "./Welcome";
 import Newest from "./Newest";
 import Added from "./AddedToRead";
 import Search from "./Search";
+import NewestBtn from "./buttons/NewestBtn";
+import HomeBtn from "./buttons/HomeBtn";
+import SearchBtn from "./buttons/SearchBtn";
+import ToReadBtn from "./buttons/ToReadBtn";
 
 const Header = () => {
   return (
     <Router>
       <header>
         <ul>
-          <li>
-            <Link to="/">HOME</Link>
-          </li>
-          <li>
-            <Link to="/new">Newest</Link>
-          </li>
-          <li>
-            <Link to="/search">Search</Link>
-          </li>
-          <li>
-            <Link to="/read">To Read</Link>
-          </li>
+          <HomeBtn />
+          <NewestBtn />
+          <SearchBtn />
+          <ToReadBtn />
         </ul>
       </header>
 
@@ -42,7 +40,6 @@ const Header = () => {
         <Route exact path="/read">
           <Added />
         </Route>
-        
       </Switch>
     </Router>
   );

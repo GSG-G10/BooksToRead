@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import AddBook from "./AddBookBtn";
 
 const Card = ({ data, add }) => {
-  console.log(add);
 
   const { volumeInfo } = data;
 
