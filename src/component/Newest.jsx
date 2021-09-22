@@ -19,7 +19,7 @@ const Newest = () => {
     <div className="newest">
       <div className="new-data">
         {data &&
-           data.map((ele) => <Card key={ele.etag} data={ele}/>)}
+           data.map((ele) => <Card key={ele.etag} data={ele} add={false}/>)}
       </div>
     </div>
   );

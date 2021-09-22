@@ -8,7 +8,7 @@ const Added = () => {
   return (
     <div className="newest">
       <div className="new-data">
-        {data && data.map((ele) => <Card key={data.indexOf(ele)} data={ele} />)}
+        {data && data.map((ele) => <Card key={data.indexOf(ele)} data={ele} add={true} />)}
       </div>
     </div>
   );
