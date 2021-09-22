@@ -1,9 +1,9 @@
 .basic {
     width: 100%;
-    height: 90vh;
+    height: 110vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(128, 50, 50, 0.8)), url(../../img/iStock-587536358.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 90vh;
+    background-size: 100% 110vh;
     display: flex;
     justify-content: center;
     align-items: center;

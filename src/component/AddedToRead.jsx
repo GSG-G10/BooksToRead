@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "./Card";
 import "./componentCss/Newest.css";
 
-const data = JSON.parse(localStorage.getItem("data"));
 
 const Added = () => {
+  let data = JSON.parse(localStorage.getItem("data"));
   return (
     <div className="newest">
       <div className="new-data">

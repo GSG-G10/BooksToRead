@@ -1,10 +1,10 @@
 import React from "react";
 import "./componentCss/Header.css";
-import Welcome from "./Welcome";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Welcome from "./Welcome";
 import Newest from "./Newest";
 import Added from "./AddedToRead";
-
+import Search from "./Search";
 
 const Header = () => {
   return (
@@ -30,14 +30,19 @@ const Header = () => {
         <Route exact path="/">
           <Welcome />
         </Route>
+
         <Route exact path="/new">
           <Newest />
         </Route>
-        <Route exact path="/read">
-          < Added />
 
+        <Route exact path="/search">
+          <Search />
         </Route>
-        <Route exact path="/search"></Route>
+
+        <Route exact path="/read">
+          <Added />
+        </Route>
+        
       </Switch>
     </Router>
   );
