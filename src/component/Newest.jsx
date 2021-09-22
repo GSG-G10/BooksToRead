@@ -4,7 +4,6 @@ import "./componentCss/Newest.css";
 
 const Newest = () => {
   const [data, setData] = useState(null);
-  const [num, setNum] = useState(0);
 
   useEffect(() => {
     fetch(
@@ -15,18 +14,12 @@ const Newest = () => {
         setData(data.items);
       });
   }, []);
-//   const click = () => {
-//     setNum(num + 1);
-//     JSON.stringify(localStorage.setItem("num", num + 1));
-//   };
 
-return (
+  return (
     <div className="newest">
       <div className="new-data">
-          {data && data.map((ele) => <Card key={ele.etag} data ={ele.volumeInfo} />
-        )}
-
-
+        {data &&
+           data.map((ele) => <Card key={ele.etag} data={ele}/>)}
       </div>
     </div>
   );

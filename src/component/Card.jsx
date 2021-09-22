@@ -1,37 +1,38 @@
-import React from 'react';
+import React from "react";
+import AddBook from "./AddBookBtn";
 
-const Card = ({data}) => {
-    console.log(data)
+const Card = ({ data }) => {
 
-    return ( <div className="card">
-    
-    <div className="item">
-      <div className="img-frame">
-        <img
-          className="book-image"
-          src={data.imageLinks.smallThumbnail}
-          alt="book"
-        />
+const { volumeInfo } = data;
+
+  return (
+    <div className="card">
+      <div className="item">
+        <div className="img-frame">
+          <img
+            className="book-image"
+            src={volumeInfo.imageLinks.smallThumbnail}
+            alt="book"
+          />
+        </div>
+
+        <div className="info">
+          <p>Category: {volumeInfo.categories}</p>
+          <p> Author: {volumeInfo.authors[0]}</p>
+          <p> puhblished Date: {volumeInfo.publishedDate}</p>
+          <p> language: {volumeInfo.language}</p>
+          <a className="link-goolge" href={volumeInfo.previewLink}>
+            Go to more Details
+          </a>
+        </div>
       </div>
 
-      <div className="info">
-        <p>Category: {data.categories}</p>
-        <p> Author: {data.authors[0]}</p>
-        <p> puhblished Date: {data.publishedDate}</p>
-        <p> language: {data.language}</p>
-        <a
-          className="link-goolge"
-          href={data.previewLink}
-        >
-          Go to more Details
-        </a>
+      <div className="area-btn">
+        <p className="book-title">Title: {volumeInfo.title}</p>
+        <AddBook data={data} />
       </div>
     </div>
+  );
+};
 
-    <div className="area-btn">
-      <p className="book-title">Title: {data.title}</p>
-    </div> 
-  </div>);
-}
- 
 export default Card;
