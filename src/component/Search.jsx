@@ -12,16 +12,14 @@ const Search = () => {
   useEffect(() => {
     const controller = new AbortController();
     const { signal } = controller;
-console.log(search)
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}`, { signal })
       .then((data) => data.json())
       .then((data) => setData(data.items))
       .catch((err) => setErr(err));
     return () => {
-    //   controller.abort();
-    setTimeout(() => controller.abort(), 2000);
+      controller.abort();
     };
-  }, [click]);
+  }, [search]);
 
   return (
     <div className="newest">
