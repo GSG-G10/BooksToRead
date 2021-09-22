@@ -3,6 +3,8 @@ import "./componentCss/Header.css";
 import Welcome from "./Welcome";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Newest from "./Newest";
+import Added from "./AddedToRead";
+
 
 const Header = () => {
   return (
@@ -31,7 +33,10 @@ const Header = () => {
         <Route exact path="/new">
           <Newest />
         </Route>
-        <Route exact path="/read"></Route>
+        <Route exact path="/read">
+          < Added />
+
+        </Route>
         <Route exact path="/search"></Route>
       </Switch>
     </Router>
